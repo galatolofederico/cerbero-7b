@@ -36,7 +36,7 @@ The model is trained on an expansive Italian Large Language Model (LLM) using sy
 
 ### Dataset Composition 📊
 
-We employed the [Fauno training dataset](https://github.com/RSTLess-research/Fauno-Italian-LLM). The training data covers a broad spectrum, incorporating:
+We employed a **refined** version of the [Fauno training dataset](https://github.com/RSTLess-research/Fauno-Italian-LLM). The training data covers a broad spectrum, incorporating:
 
 - **Medical Data:** Capturing nuances in medical language. 🩺
 - **Technical Content:** Extracted from Stack Overflow to enhance the model's understanding of technical discourse. 💻
