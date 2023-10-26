@@ -1,6 +1,6 @@
 # cerbero-7b Italian LLM 🚀 
 
-> 📢 **cerbero-7b** is a fine-tuned **Italian Large Language Model** (LLM) with a large context length of **8192 tokens** which excels in linguistic benchmarks.
+> 📢 **cerbero-7b** is an **Italian Large Language Model** (LLM) with a large context length of **8192 tokens** which excels in linguistic benchmarks.
 
 
 <p align="center">
