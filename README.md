@@ -70,7 +70,7 @@ prompt = """Questa è una conversazione tra un umano ed un assistente AI.
 
 input_ids = tokenizer(prompt, return_tensors='pt').input_ids
 with torch.no_grad():
-    output_ids = model.generate(input_ids, max_new_tokens=1024)
+    output_ids = model.generate(input_ids, max_new_tokens=128)
 
 generated_text = tokenizer.decode(output_ids[0], skip_special_tokens=True)
 print(generated_text)
