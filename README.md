@@ -1,19 +1,18 @@
 # cerbero-7b Italian LLM 🚀 
 
-> 📢 **cerbero-7b** is an **Italian Large Language Model** (LLM) with a large context length of **8192 tokens** which excels in linguistic benchmarks.
-
+> 📢 **Cerbero-7b** is the first **100% Free** and Open Source **Italian Large Language Model** (LLM) ready to be used for **research** or **commercial applications**.
 
 <p align="center">
   <img width="300" height="300" src="./README.md.d/cerbero.png">
 </p>
 
-Built on **mistral-7b**, which outperforms Llama2 13B across all benchmarks and surpasses Llama 1 34B in numerous metrics.
+Built on [**mistral-7b**](https://mistral.ai/news/announcing-mistral-7b/), which outperforms Llama2 13B across all benchmarks and surpasses Llama1 34B in numerous metrics.
 
 **cerbero-7b** is specifically crafted to fill the void in Italy's AI landscape.
 
 A **cambrian explosion** of **Italian Language Models** is essential for building advanced AI architectures that can cater to the diverse needs of the population.
 
-**cerbero-7b**, alongside companions like [**Camoscio**](https://github.com/teelinsan/camoscio) and [**Fauno**](https://github.com/RSTLess-research/Fauno-Italian-LLM), aims to kick-start this revolution in Italy, ushering in an era where sophisticated **AI solutions** can seamlessly interact with and understand the intricacies of the **Italian language**, thereby empowering **innovation** across **industries** and fostering a deeper **connection** between **technology** and the **people** it serves.
+**cerbero-7b**, alongside companions like [**Camoscio**](https://github.com/teelinsan/camoscio) and [**Fauno**](https://github.com/RSTLess-research/Fauno-Italian-LLM), aims to help **kick-start** this **revolution** in Italy, ushering in an era where sophisticated **AI solutions** can seamlessly interact with and understand the intricacies of the **Italian language**, thereby empowering **innovation** across **industries** and fostering a deeper **connection** between **technology** and the **people** it serves.
 
 **cerbero-7b** is released under the **permissive** Apache 2.0 **license**, allowing **unrestricted usage**, even **for commercial applications**.
 
@@ -33,7 +32,7 @@ The name "Cerbero," inspired by the three-headed dog that guards the gates of th
 ## Training Details 🚀
 
 cerbero-7b is **fully fine-tuned**, distinguishing itself from LORA or QLORA fine-tunes. 
-The model is trained on an expansive Italian Large Language Model (LLM) using synthetic datasets generated through dynamic self-chat.
+The model is trained on an expansive Italian Large Language Model (LLM) using synthetic datasets generated through dynamic self-chat on a large context window of **8192 tokens**
 
 ### Dataset Composition 📊
 
