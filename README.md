@@ -58,7 +58,6 @@ The model has been trained for **3 epochs**, ensuring a convergence of knowledge
 
 You can load cerbero-7b using [🤗transformers](https://huggingface.co/docs/transformers/index)
 
-
 ```python
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -76,4 +75,27 @@ with torch.no_grad():
 
 generated_text = tokenizer.decode(output_ids[0], skip_special_tokens=True)
 print(generated_text)
+```
+
+### GGUF and llama.cpp
+
+cerbero-7b is fully compatibile with [llama.cpp](https://github.com/ggerganov/llama.cpp).
+
+You can find the **original** and **quantized** versions of cerbero-7b in the `gguf` format [here]([here](https://huggingface.co/galatolo/cerbero-7b-gguf/tree/main))
+
+```python
+from llama_cpp import Llama
+from huggingface_hub import hf_hub_download  
+
+llm = Llama(
+    model_path=hf_hub_download(
+        repo_id="galatolo/cerbero-7b-gguf",
+        filename="ggml-model-Q4_K.gguf",
+    ),
+    n_ctx=4086,
+) 
+
+llm.generate("""Questa è una conversazione tra un umano ed un assistente AI.
+[|Umano|] Come posso distinguere un AI da un umano?
+[|AI|]""")
 ```
