@@ -79,9 +79,9 @@ print(generated_text)
 
 ### GGUF and llama.cpp
 
-cerbero-7b is fully compatibile with [llama.cpp](https://github.com/ggerganov/llama.cpp).
+cerbero-7b is fully compatibile with [llama.cpp](https://github.com/ggerganov/llama.cpp)
 
-You can find the **original** and **quantized** versions of cerbero-7b in the `gguf` format [here]([here](https://huggingface.co/galatolo/cerbero-7b-gguf/tree/main))
+You can find the **original** and **quantized** versions of cerbero-7b in the `gguf` format [here](https://huggingface.co/galatolo/cerbero-7b-gguf/tree/main)
 
 ```python
 from llama_cpp import Llama
