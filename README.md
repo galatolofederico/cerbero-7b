@@ -8,7 +8,7 @@
   <img width="300" height="300" src="./README.md.d/cerbero.png">
 </p>
 
-Built on [**mistral-7b**](https://mistral.ai/news/announcing-mistral-7b/), which outperforms Llama2 13B across all benchmarks and surpasses Llama1 34B in numerous metrics.
+Built on top of [**mistral-7b**](https://mistral.ai/news/announcing-mistral-7b/), which outperforms Llama2 13B across all benchmarks and surpasses Llama1 34B in numerous metrics.
 
 **cerbero-7b** is specifically crafted to fill the void in Italy's AI landscape.
 
