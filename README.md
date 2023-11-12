@@ -1,5 +1,7 @@
 # cerbero-7b Italian LLM 🚀 
 
+> 🔥 Attention! We are **currently** in the process of **training** a significantly **more capable** version of **Cerbero-7b**. Stay tuned for updates!
+
 > 📢 **Cerbero-7b** is the first **100% Free** and Open Source **Italian Large Language Model** (LLM) ready to be used for **research** or **commercial applications**.
 
 **Try an online demo [here](https://huggingface.co/spaces/galatolo/chat-with-cerbero-7b)** (quantized demo running on CPU, a lot less powerful than the original cerbero-7b)
