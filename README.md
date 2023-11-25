@@ -1,8 +1,8 @@
 # cerbero-7b Italian LLM 🚀 
 
-> 🔥 Attention! We are **currently** in the process of **training** a significantly **more capable** version of **Cerbero-7b**. Stay tuned for updates!
+> 🔥 Attention! The **new** and **more capable** version of **cerbero-7b** is now **available**!
 
-> 📢 **Cerbero-7b** is the first **100% Free** and Open Source **Italian Large Language Model** (LLM) ready to be used for **research** or **commercial applications**.
+> 📢 **cerbero-7b** is the first **100% Free** and Open Source **Italian Large Language Model** (LLM) ready to be used for **research** or **commercial applications**.
 
 **Try an online demo [here](https://huggingface.co/spaces/galatolo/chat-with-cerbero-7b)** (quantized demo running on CPU, a lot less powerful than the original cerbero-7b)
 
@@ -20,6 +20,33 @@ A **cambrian explosion** of **Italian Language Models** is essential for buildin
 
 **cerbero-7b** is released under the **permissive** Apache 2.0 **license**, allowing **unrestricted usage**, even **for commercial applications**.
 
+## Model Evaluation Results 📈
+
+The `cerbero-7b` model has been rigorously evaluated across several benchmarks to demonstrate its proficiency in understanding and generating Italian text. Below are the summarized results showcasing its performance:
+
+### SQuAD-it Evaluation
+
+The Stanford Question Answering Dataset (SQuAD) in Italian (SQuAD-it) is used to evaluate the model's reading comprehension and question-answering capabilities. The following table presents the F1 score and Exact Match (EM) metrics:
+
+| Model                                        | F1 Score | Exact Match (EM) |
+|----------------------------------------------|--------------|----------------------|
+| **cerbero-7b**                               | **72.55%**   | **55.6%**            |
+| Fauno                                        | 44.46%       | 0.00%                |
+| Camoscio                                     | 37.42%       | 0.00%                |
+| mistral-7b                                   | 15.55%       | 8.50%                |
+
+### EVALITA Benchmark Results
+
+EVALITA benchmarks assess the model's performance in tasks like toxicity detection, irony detection, and sentiment analysis. The table below shows the F1 scores for these tasks:
+
+| Model                                        | Toxicity Detection | Irony Detection | Sentiment Analysis |
+|----------------------------------------------|--------------------|-----------------|--------------------|
+| **cerbero-7b**                               | **63.04%**         | **48.51%**      | **61.80%**         |
+| Fauno                                        | 33.84%             | 39.17%          | 12.23%             |
+| Camoscio                                     | 38.18%             | 39.65%          | 13.33%             |
+| mistral-7b                                   | 34.16%             | 34.16%          | 12.14%             |
+
+
 ## Why Cerbero? 🤔
 
 The name "Cerbero," inspired by the three-headed dog that guards the gates of the Underworld in Greek mythology, encapsulates the essence of our model, drawing strength from three foundational pillars:
@@ -27,38 +54,33 @@ The name "Cerbero," inspired by the three-headed dog that guards the gates of th
 - **Base Model: mistral-7b** 🏗️
   cerbero-7b builds upon the formidable **mistral-7b** as its base model. This choice ensures a robust foundation, leveraging the power and capabilities of a cutting-edge language model.
 
-- **Datasets: Fauno Dataset** 📚
-  Utilizing the comprehensive **fauno dataset**, cerbero-7b gains a diverse and rich understanding of the Italian language. The incorporation of varied data sources contributes to its versatility in handling a wide array of tasks.
+- **Datasets: Cerbero Dataset** 📚
+  The Cerbero Dataset is a groundbreaking collection specifically curated to enhance the proficiency of cerbero-7b in understanding and generating Italian text. This dataset is a product of an innovative method combining dynamic self-chat mechanisms with advanced Large Language Model (LLM) technology. Refer to the [paper](README.md) for more details.
 
 - **Licensing: Apache 2.0** 🕊️
   Released under the **permissive Apache 2.0 license**, cerbero-7b promotes openness and collaboration. This licensing choice empowers developers with the freedom for unrestricted usage, fostering a community-driven approach to advancing AI in Italy and beyond.
 
 ## Training Details 🚀
 
-cerbero-7b is **fully fine-tuned**, distinguishing itself from LORA or QLORA fine-tunes. 
+**cerbero-7b** is a **fully fine-tuned** LLM, distinguishing itself from LORA or QLORA fine-tunes. 
 The model is trained on an expansive Italian Large Language Model (LLM) using synthetic datasets generated through dynamic self-chat on a large context window of **8192 tokens**
 
 ### Dataset Composition 📊
 
-We employed a **refined** version of the [Fauno training dataset](https://github.com/RSTLess-research/Fauno-Italian-LLM). The training data covers a broad spectrum, incorporating:
-
-- **Medical Data:** Capturing nuances in medical language. 🩺
-- **Technical Content:** Extracted from Stack Overflow to enhance the model's understanding of technical discourse. 💻
-- **Quora Discussions:** Providing valuable insights into common queries and language usage. ❓
-- **Alpaca Data Translation:** Italian-translated content from Alpaca contributes to the model's language richness and contextual understanding. 🦙
+> 📢 Details on the **Cerbero Dataset** will be updated shortly!
 
 ### Training Setup ⚙️
 
-cerbero-7b is trained on an NVIDIA DGX H100:
+**cerbero-7b** is trained on an NVIDIA DGX H100:
 
 - **Hardware:** Utilizing 8xH100 GPUs, each with 80 GB VRAM. 🖥️
 - **Parallelism:** DeepSpeed Zero stage 1 parallelism for optimal training efficiency.✨
 
-The model has been trained for **3 epochs**, ensuring a convergence of knowledge and proficiency in handling diverse linguistic tasks.
+The model has been trained for **1 epoch**, ensuring a convergence of knowledge and proficiency in handling diverse linguistic tasks.
 
 ## Getting Started 🚀
 
-You can load cerbero-7b using [🤗transformers](https://huggingface.co/docs/transformers/index)
+You can load **cerbero-7b** using [🤗transformers](https://huggingface.co/docs/transformers/index)
 
 ```python
 import torch
@@ -81,9 +103,9 @@ print(generated_text)
 
 ### GGUF and llama.cpp
 
-cerbero-7b is fully compatibile with [llama.cpp](https://github.com/ggerganov/llama.cpp)
+**cerbero-7b** is fully **compatibile** with [llama.cpp](https://github.com/ggerganov/llama.cpp)
 
-You can find the **original** and **quantized** versions of cerbero-7b in the `gguf` format [here](https://huggingface.co/galatolo/cerbero-7b-gguf/tree/main)
+You can find the **original** and **quantized** versions of **cerbero-7b** in the `gguf` format [here](https://huggingface.co/galatolo/cerbero-7b-gguf/tree/main)
 
 ```python
 from llama_cpp import Llama
