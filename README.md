@@ -91,7 +91,7 @@ tokenizer = AutoTokenizer.from_pretrained("galatolo/cerbero-7b")
 
 prompt = """Questa è una conversazione tra un umano ed un assistente AI.
 [|Umano|] Come posso distinguere un AI da un umano?
-[|AI|]"""
+[|Assistente|]"""
 
 input_ids = tokenizer(prompt, return_tensors='pt').input_ids
 with torch.no_grad():
@@ -121,5 +121,5 @@ llm = Llama(
 
 llm.generate("""Questa è una conversazione tra un umano ed un assistente AI.
 [|Umano|] Come posso distinguere un AI da un umano?
-[|AI|]""")
+[|Assistente|]""")
 ```
