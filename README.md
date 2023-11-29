@@ -1,6 +1,6 @@
 # cerbero-7b Italian LLM 🚀 
 
-> 🔥 Attention! The **new** and **more capable** version of **cerbero-7b** is now **available**!
+> 🔥 The research paper unveiling the secrets behind **cerbero-7b**, is now available on [arXiv](https://arxiv.org/abs/2311.15698)!
 
 > 📢 **cerbero-7b** is the first **100% Free** and Open Source **Italian Large Language Model** (LLM) ready to be used for **research** or **commercial applications**.
 
@@ -55,7 +55,7 @@ The name "Cerbero," inspired by the three-headed dog that guards the gates of th
   cerbero-7b builds upon the formidable **mistral-7b** as its base model. This choice ensures a robust foundation, leveraging the power and capabilities of a cutting-edge language model.
 
 - **Datasets: Cerbero Dataset** 📚
-  The Cerbero Dataset is a groundbreaking collection specifically curated to enhance the proficiency of cerbero-7b in understanding and generating Italian text. This dataset is a product of an innovative method combining dynamic self-chat mechanisms with advanced Large Language Model (LLM) technology. Refer to the [paper](README.md) for more details.
+  The Cerbero Dataset is a groundbreaking collection specifically curated to enhance the proficiency of cerbero-7b in understanding and generating Italian text. This dataset is a product of an innovative method combining dynamic self-chat mechanisms with advanced Large Language Model (LLM) technology. Refer to the [paper](https://arxiv.org/abs/2311.15698) for more details.
 
 - **Licensing: Apache 2.0** 🕊️
   Released under the **permissive Apache 2.0 license**, cerbero-7b promotes openness and collaboration. This licensing choice empowers developers with the freedom for unrestricted usage, fostering a community-driven approach to advancing AI in Italy and beyond.
