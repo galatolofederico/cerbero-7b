@@ -1,6 +1,6 @@
 # cerbero-7b Italian LLM 🚀 
 
-> 🔥 The research paper unveiling the secrets behind **cerbero-7b**, is now available on [arXiv](https://arxiv.org/abs/2311.15698)!
+> 🔥 The research paper unveiling the secrets behind **cerbero-7b** is now available on [arXiv](https://arxiv.org/abs/2311.15698)!
 
 > 📢 **cerbero-7b** is the first **100% Free** and Open Source **Italian Large Language Model** (LLM) ready to be used for **research** or **commercial applications**.
 
@@ -114,7 +114,7 @@ from huggingface_hub import hf_hub_download
 llm = Llama(
     model_path=hf_hub_download(
         repo_id="galatolo/cerbero-7b-gguf",
-        filename="ggml-model-Q4_K.gguf",
+        filename="ggml-model-f16.gguf",
     ),
     n_ctx=4086,
 ) 
