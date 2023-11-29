@@ -123,3 +123,16 @@ llm.generate("""Questa è una conversazione tra un umano ed un assistente AI.
 [|Umano|] Come posso distinguere un AI da un umano?
 [|Assistente|]""")
 ```
+
+## Citation 📖
+
+If you use **cerbero-7b** in your research, please cite our paper:
+
+```bibtex
+@article{galatolo2023cerbero,
+  title={Cerbero-7B: A Leap Forward in Language-Specific LLMs Through Enhanced Chat Corpus Generation and Evaluation},
+  author={Galatolo, Federico A and Cimino, Mario GCA},
+  journal={arXiv preprint arXiv:2311.15698},
+  year={2023}
+}
+```
