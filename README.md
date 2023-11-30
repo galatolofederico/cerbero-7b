@@ -1,5 +1,7 @@
 # cerbero-7b Italian LLM 🚀 
 
+> 🚀 **New Release**: **cerbero-7b-openchat** our latest SOTA model based on [**openchat3.5**](https://github.com/imoneoi/openchat), delivering performance **on par with** or **superior** to **ChatGPT 3.5**!
+
 > 🔥 The research paper unveiling the secrets behind **cerbero-7b** is now available on [arXiv](https://arxiv.org/abs/2311.15698)!
 
 > 📢 **cerbero-7b** is the first **100% Free** and Open Source **Italian Large Language Model** (LLM) ready to be used for **research** or **commercial applications**.
@@ -30,6 +32,7 @@ The Stanford Question Answering Dataset (SQuAD) in Italian (SQuAD-it) is used to
 
 | Model                                        | F1 Score | Exact Match (EM) |
 |----------------------------------------------|--------------|----------------------|
+| **cerbero-7b-openchat**                      | **74.09%**   | **56.0%**            |
 | **cerbero-7b**                               | **72.55%**   | **55.6%**            |
 | Fauno                                        | 44.46%       | 0.00%                |
 | Camoscio                                     | 37.42%       | 0.00%                |
@@ -41,6 +44,7 @@ EVALITA benchmarks assess the model's performance in tasks like toxicity detecti
 
 | Model                                        | Toxicity Detection | Irony Detection | Sentiment Analysis |
 |----------------------------------------------|--------------------|-----------------|--------------------|
+| **cerbero-7b-openchat**                      | **63.33%**         | **69.16%**      | **66.89%**         |
 | **cerbero-7b**                               | **63.04%**         | **48.51%**      | **61.80%**         |
 | Fauno                                        | 33.84%             | 39.17%          | 12.23%             |
 | Camoscio                                     | 38.18%             | 39.65%          | 13.33%             |
@@ -59,6 +63,21 @@ The name "Cerbero," inspired by the three-headed dog that guards the gates of th
 
 - **Licensing: Apache 2.0** 🕊️
   Released under the **permissive Apache 2.0 license**, cerbero-7b promotes openness and collaboration. This licensing choice empowers developers with the freedom for unrestricted usage, fostering a community-driven approach to advancing AI in Italy and beyond.
+
+## Models 🧬
+
+**cerbero-7b** is available in various flavors, each tailored for specific applications and use cases. Below is a table listing these versions along with their respective training datasets and base models:
+
+| Model Name              | Training Dataset  | Base Model  | Huggingface Model | Llama.cpp and Quantized Model |
+|-------------------------|-------------------|-------------|-------------------|-------------------------------|
+| cerbero-7b              | Cerbero Dataset   | mistral-7b  | [link](https://huggingface.co/galatolo/cerbero-7b) | [link](https://huggingface.co/galatolo/cerbero-7b-gguf) |
+| cerbero-7b-openchat     | Cerbero Dataset   | openchat3.5 | [link](https://huggingface.co/galatolo/cerbero-7b-openchat) | [link](https://huggingface.co/galatolo/cerbero-7b-openchat-gguf) |
+
+
+Each of these models brings its unique strengths to the table, making **cerbero-7b** a versatile tool for both research and commercial applications in the Italian language AI domain.
+
+We are committed to continuously enhancing **cerbero-7b**. Our team plans to keep training and releasing new models as advancements in the 7b SOTA occur. This ensures that **cerbero-7b** remains at the forefront of AI technology, offering the most advanced and efficient solutions in the Italian language AI sector.
+
 
 ## Training Details 🚀
 
@@ -80,7 +99,7 @@ The model has been trained for **1 epoch**, ensuring a convergence of knowledge 
 
 ## Getting Started 🚀
 
-You can load **cerbero-7b** using [🤗transformers](https://huggingface.co/docs/transformers/index)
+You can load **cerbero-7b** (or **cerbero-7b-openchat**) using [🤗transformers](https://huggingface.co/docs/transformers/index)
 
 ```python
 import torch
