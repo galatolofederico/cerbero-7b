@@ -78,6 +78,11 @@ Each of these models brings its unique strengths to the table, making **cerbero-
 
 We are committed to continuously enhancing **cerbero-7b**. Our team plans to keep training and releasing new models as advancements in the 7b SOTA occur. This ensures that **cerbero-7b** remains at the forefront of AI technology, offering the most advanced and efficient solutions in the Italian language AI sector.
 
+If you do not have enough RAM to fit the `float32` model (for example when using Colab) we provide for each model a `float16` version using the `revision="float16"` argument 
+
+```python
+model = AutoModelForCausalLM.from_pretrained("galatolo/cerbero-7b", revision="float16")
+```
 
 ## Training Details 🚀
 
