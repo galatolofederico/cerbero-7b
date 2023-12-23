@@ -114,7 +114,9 @@ The model has been trained for **1 epoch**, ensuring a convergence of knowledge 
 ```
 
 When crafting prompts, ensure to conclude with the `[|Assistente|]` tag, signaling the AI to generate a response.
-Use `[|Umano|]` as stop word. For example:
+Use `[|Umano|]` as stop word. 
+
+For example:
 
 ```
 [|Umano|] Come posso distinguere un AI da un umano?
