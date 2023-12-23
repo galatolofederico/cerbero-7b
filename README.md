@@ -102,6 +102,27 @@ The model is trained on an expansive Italian Large Language Model (LLM) using sy
 
 The model has been trained for **1 epoch**, ensuring a convergence of knowledge and proficiency in handling diverse linguistic tasks.
 
+## Prompt Format
+
+**cerbero-7b** is trained on full conversations using the following prompt format:
+
+```
+[|Umano|] First human message
+[|Assistente|] First AI reply
+[|Umano|] Second human message
+[|Assistente|] Second AI reply
+```
+
+When crafting prompts, ensure to conclude with the `[|Assistente|]` tag, signaling the AI to generate a response.
+Use `[|Umano|]` as stop word.
+
+```
+[|Umano|] Come posso distinguere un AI da un umano?
+[|Assistente|]
+```
+
+While it's possible to include a brief system message at the start of your prompt, remember that the training data for **cerbero-7b** **does not** contain such **system messages**. Hence, it's recommended to minimize or avoid including them for optimal model performance.
+
 ## Getting Started 🚀
 
 You can load **cerbero-7b** (or **cerbero-7b-openchat**) using [🤗transformers](https://huggingface.co/docs/transformers/index)
