@@ -171,6 +171,10 @@ llm.generate("""Questa è una conversazione tra un umano ed un assistente AI.
 [|Assistente|]""")
 ```
 
+## Differences from the paper
+
+> 📢 Attention: The released versions of `cerbero-7b` slightly differ from those used in the paper. The training dataset for the released models was generated using `llama-65b` instead of `llama-2-70b-chat`, due to the more permissive license of the `llama-65b` model (CC-BY-NC 4.0). Our tests indicate that both models produce datasets of comparable quality, and the resulting fine-tuned models demonstrate nearly indistinguishable performance
+
 ## Citation 📖
 
 If you use **cerbero-7b** in your research, please cite our paper:
