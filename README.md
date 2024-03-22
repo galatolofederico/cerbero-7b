@@ -6,7 +6,7 @@
 
 > 📢 **cerbero-7b** is the first **100% Free** and Open Source **Italian Large Language Model** (LLM) ready to be used for **research** or **commercial applications**.
 
-**Try an online demo [here](https://huggingface.co/spaces/galatolo/chat-with-cerbero-7b)** (quantized demo running on CPU, a lot less powerful than the original cerbero-7b)
+**Try an online demo [here](https://cerbero.rocks/)**
 
 <p align="center">
   <img width="300" height="300" src="./README.md.d/cerbero.png">
@@ -104,7 +104,9 @@ The model has been trained for **1 epoch**, ensuring a convergence of knowledge 
 
 ## Prompt Format
 
-**cerbero-7b** is trained on full conversations using the following prompt format:
+**cerbero-7b** supports 🤗**Chat Templates** using the `tokenizer.apply_chat_template` function.
+
+The model is trained on full conversations using the following prompt format:
 
 ```
 [|Umano|] First human message
@@ -131,20 +133,25 @@ You can load **cerbero-7b** (or **cerbero-7b-openchat**) using [🤗transformers
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import pipeline
 
-model = AutoModelForCausalLM.from_pretrained("galatolo/cerbero-7b")
-tokenizer = AutoTokenizer.from_pretrained("galatolo/cerbero-7b")
+pipe = pipeline('text-generation', model="galatolo/cerbero-7b")
 
-prompt = """Questa è una conversazione tra un umano ed un assistente AI.
-[|Umano|] Come posso distinguere un AI da un umano?
-[|Assistente|]"""
+messages=[
+    {
+        "role": "system",
+        "content": "Conversazione tra un umano ed un assistente AI."
+    },
+    {
+        "role": "user",
+        "content": "Come posso distinguere un AI da un umano?"
+    },
+]
 
-input_ids = tokenizer(prompt, return_tensors='pt').input_ids
-with torch.no_grad():
-    output_ids = model.generate(input_ids, max_new_tokens=128)
 
-generated_text = tokenizer.decode(output_ids[0], skip_special_tokens=True)
+prompt = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+generated_text = pipe(prompt, max_new_tokens=128)[0]['generated_text']
+
 print(generated_text)
 ```
 
