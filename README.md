@@ -178,6 +178,16 @@ llm.generate("""Questa è una conversazione tra un umano ed un assistente AI.
 [|Assistente|]""")
 ```
 
+### Ollama
+
+**cerbero-7b** is fully integrated with the [ollama](https://github.com/ollama/ollama) framework, enabling you to easily deploy and run our models in your environment. To use **cerbero-7b** within **ollama**, simply execute the following command:
+
+```
+ollama run galatolo/cerbero-7b
+```
+
+or `ollama run galatolo/cerbero-7b-openchat` for the `openchat` version.
+
 ## Differences from the paper
 
 > 📢 Attention: The released versions of `cerbero-7b` slightly differ from those used in the paper. The training dataset for the released models was generated using `llama-65b` instead of `llama-2-70b-chat`, due to the more permissive license of the `llama-65b` model. Our tests indicate that both models produce datasets of comparable quality, and the resulting fine-tuned models demonstrate nearly indistinguishable performance
